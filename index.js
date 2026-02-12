@@ -130,6 +130,84 @@ for(let i=nums.length-1; i>=0;i--){
 alert('Ej10 - Valor decimal: '+valor)
 
 
+//Ejercicio 11
+let t = Number(prompt('Ingresa el tamaño del arreglo '));
+let x = Number(prompt('Ingresa el numero para los multiplos '));
+nums= [];
+num=0;
+for(let i=0; i<t;i++){
+    num=i*x;
+    nums.push(num)
+}
+
+alert('El arreglo de tamaño '+t+' con multiplos del '+x+'\n'+nums)
+
+
+//Ejercicio 12 
+
+t = Number(prompt('Ingresa el tamaño del arreglo '));
+nums=[];
+let mayor;
+for(let i=0; i<t;i++){
+    x = Number(prompt('Ingresa el valor '+(i+1)+'° al arreglo: '));
+    nums.push(x);
+}
+for(let i=0; i<t;i++){
+    for(let j=i+1; j<t;j++){
+        if(nums[i]>nums[j]){
+            mayor=nums[i]
+        }
+    }
+}
+
+alert('Ej12 El numero mayor del arreglo ['+nums+'] es '+mayor)
+
+// Ejercicio 13
+nums =[1,2,3,4];
+let result = false;
+for(let i=0; i<nums.length;i++){
+    for(let j=0; j<nums.length;j++){
+        if(i!=j){
+            if(nums[i]==nums[j]){
+                result = true;
+                break;
+            }
+        }
+    }
+}
+
+alert('Ej13 Hay repetidos? '+result);
+
+//Ejercicio 14
+
+nums=[2,2,6,2,1]
+result = false;
+for(let i=0; i<nums.length;i++){
+    if(nums[i]==nums[nums.length-1-i]){
+        result = true;
+    }else{
+        result=false;
+        break;
+    }
+}
+
+alert('Ej14 Es palindromo? -> '+result);
+
+//Ejercicio 15
+
+nums = [1,3,2,1,4]
+let tam = nums.length;
+result = false;
+let mensaje = '';
+if(tam%2 == 0){
+    result = true;
+    mensaje= 'PAR'
+}else{
+    mensaje= 'IMPAR'
+}
+
+alert('Ej15 El tamaño del arreglo es '+ mensaje);
+
 
 
 
